@@ -1,0 +1,46 @@
+@import "../../../styles/colors";
+@import "../../../styles/shapes";
+
+.btn {
+  background-color: $primary;
+  color: $white;
+  border: none;
+  transition: all 0.2s ease;
+
+  &--small {
+    width: 112px;
+    height: 32px;
+    border-radius: 4px;
+  }
+  &--medium {
+    width: 128px;
+    height: 40px;
+    border-radius: 8px;
+  }
+  &--large {
+    width: 128px;
+    height: 56px;
+    border-radius: 16px;
+  }
+
+  &:focus {
+    background-color: $primary-focus;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    background-color: $primary-pressed;
+  }
+
+  &:disabled {
+    background-color: $primary-disabled;
+    color: #9bb1c8;
+  }
+}
+@include bg-base-colors();
+@include bg-neutral-colors();
+@include border-shapes();

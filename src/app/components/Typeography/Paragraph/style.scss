@@ -1,0 +1,41 @@
+@import "../../../styles/fonts";
+@import "../../../styles/colors";
+
+.paragraph {
+  margin: 0;
+  padding: 0;
+  color: $black;
+  @include prime-font-regular();
+  &--body {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  &--callout {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &--subhead {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &--footnote {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  &--caption {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--small {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
+@include text-base-colors;
+@include text-neutral-colors;

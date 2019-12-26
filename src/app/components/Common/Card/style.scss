@@ -1,0 +1,22 @@
+@import "../../../styles/colors";
+@import "../../../styles/gradients";
+@import "../../../styles/fonts";
+
+.card {
+  height: 360px;
+  width: 288px;
+  display: flex;
+  align-items: flex-end;
+  padding: 32px 32px;
+  border-radius: 24px;
+  background: linear-gradient(rgba($black, 0.4), rgba($black, 0.4)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80")
+      no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: rgba($black, 0.5) 0 4px 8px;
+  &__content {
+    *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

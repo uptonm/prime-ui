@@ -1,0 +1,96 @@
+// UI Base Colors
+$primary: #5333ff;
+$secondary: #008fff;
+$tertiary: #3ddefb;
+$success: #45f3c4;
+$warning: #ffc040;
+$error: #ff794f;
+
+$primary-focus: #6447ff;
+$primary-hover: #7e66ff;
+$primary-pressed: #b7a3fe;
+$primary-disabled: #e6ecf4;
+
+$primary-75: rgba($primary, 0.75);
+$secondary-75: rgba($secondary, 0.75);
+$tertiary-75: rgba($tertiary, 0.75);
+$success-75: rgba($success, 0.75);
+$warning-75: rgba($warning, 0.75);
+$error-75: rgba($error, 0.75);
+
+$primary-50: rgba($primary, 0.5);
+$secondary-50: rgba($secondary, 0.5);
+$tertiary-50: rgba($tertiary, 0.5);
+$success-50: rgba($success, 0.5);
+$warning-50: rgba($warning, 0.5);
+$error-50: rgba($error, 0.5);
+
+$primary-25: rgba($primary, 0.25);
+$secondary-25: rgba($secondary, 0.25);
+$tertiary-25: rgba($tertiary, 0.25);
+$success-25: rgba($success, 0.25);
+$warning-25: rgba($warning, 0.25);
+$error-25: rgba($error, 0.25);
+
+$primary-10: rgba($primary, 0.1);
+$secondary-10: rgba($secondary, 0.1);
+$tertiary-10: rgba($tertiary, 0.1);
+$success-10: rgba($success, 0.1);
+$warning-10: rgba($warning, 0.1);
+$error-10: rgba($error, 0.1);
+
+// UI Neutral Colors
+$black: #030f1c;
+$dark: #9bb1c8;
+$medium: #e1e8f3;
+$light: #f7f9fc;
+$white: #fff;
+
+$base-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  success: $success,
+  warning: $warning,
+  error: $error
+);
+
+$neutral-colors: (
+  black: $black,
+  dark: $dark,
+  medium: $medium,
+  light: $light,
+  white: $white
+);
+
+@mixin text-base-colors {
+  @each $name, $hex in $base-colors {
+    .#{$name}-text {
+      color: $hex;
+    }
+  }
+}
+
+@mixin text-neutral-colors {
+  @each $name, $hex in $neutral-colors {
+    .#{$name}-text {
+      color: $hex;
+    }
+  }
+}
+
+@mixin bg-base-colors {
+  @each $name, $hex in $base-colors {
+    .#{$name}-bg {
+      background-color: $hex;
+    }
+  }
+}
+
+@mixin bg-neutral-colors {
+  @each $name, $hex in $neutral-colors {
+    .#{$name}-bg {
+      background-color: $hex;
+    }
+  }
+}

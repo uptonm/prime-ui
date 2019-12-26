@@ -1,0 +1,21 @@
+$radius-circle: 80px;
+$radius-large: 16px;
+$radius-medium: 8px;
+$radius-small: 4px;
+$radius-sharp: 0px;
+
+$border-shapes: (
+  circle: $radius-circle,
+  large: $radius-large,
+  medium: $radius-medium,
+  small: $radius-small,
+  sharp: $radius-sharp
+);
+
+@mixin border-shapes {
+  @each $name, $size in $border-shapes {
+    .#{$name}-radius {
+      border-radius: $size;
+    }
+  }
+}

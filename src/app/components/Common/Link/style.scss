@@ -1,0 +1,18 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+.link:visited,
+.link:link {
+  @include prime-font-regular();
+  font-size: 16px;
+  color: $primary;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & * {
+    margin-left: 5px;
+  }
+}

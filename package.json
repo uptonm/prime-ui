@@ -7,12 +7,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "svgr": "svgr -d src/app/components/Common/Icons/ src/static/icons/"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "@svgr/cli": "^5.0.0",
     "babel-loader": "^8.0.6"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./style.scss";
-import { Icon } from "../../../temp/Icons";
+import { Icon } from "../Icons";
 
 export interface ILinkProps {
   to: string;

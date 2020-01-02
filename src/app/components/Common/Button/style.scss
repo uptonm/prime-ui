@@ -24,20 +24,20 @@
   }
 
   &:focus {
-    background-color: $primary-focus;
+    background-color: $button-focus;
     outline: none;
   }
 
   &:hover {
-    background-color: $primary-hover;
+    background-color: $button-hover;
   }
 
   &:active {
-    background-color: $primary-pressed;
+    background-color: $button-pressed;
   }
 
   &:disabled {
-    background-color: $primary-disabled;
+    background-color: $button-disabled;
     color: #9bb1c8;
   }
 }

@@ -6,11 +6,6 @@ $success: #45f3c4;
 $warning: #ffc040;
 $error: #ff794f;
 
-$primary-focus: #6447ff;
-$primary-hover: #7e66ff;
-$primary-pressed: #b7a3fe;
-$primary-disabled: #e6ecf4;
-
 $primary-75: rgba($primary, 0.75);
 $secondary-75: rgba($secondary, 0.75);
 $tertiary-75: rgba($tertiary, 0.75);
@@ -45,6 +40,18 @@ $dark: #9bb1c8;
 $medium: #e1e8f3;
 $light: #f7f9fc;
 $white: #fff;
+
+$button-disabled: #e6ecf4;
+$button-focus: rgba($white, 0.1);
+$button-hover: rgba($white, 0.25);
+$button-pressed: #b7a3fe;
+
+$input-success: $success-25;
+$input-disabled: $medium;
+$input-error: $error-25;
+$input-focus: transparent;
+$input-hover: $primary-25;
+$input-pressed: $primary-10;
 
 $base-colors: (
   primary: $primary,

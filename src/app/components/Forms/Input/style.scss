@@ -1,0 +1,59 @@
+@import "../../../styles/colors";
+@import "../../../styles/shapes";
+@import "../../../styles/fonts";
+
+.input {
+  @include border-shapes();
+  &__field {
+    @include prime-font-regular();
+    font-size: 17px;
+    line-height: 27px;
+    width: 100%;
+    padding: 16px;
+    background-color: $white;
+    border: 1px solid $medium;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $primary;
+    }
+
+    &:hover {
+      outline: none;
+      border: 1px solid $input-hover;
+    }
+
+    &:active {
+      outline: none;
+      border: 1px solid $input-hover;
+      background-color: $input-pressed;
+    }
+
+    &:disabled {
+      border: 1px $medium;
+      background-color: $medium;
+    }
+
+    &--success {
+      border: 1px solid $success !important;
+      background-color: $success-25 !important;
+    }
+
+    &--error {
+      border: 1px solid $error !important;
+      background-color: $error-25 !important;
+    }
+  }
+
+  &__field::placeholder {
+    color: $dark;
+  }
+
+  &__field--medium {
+    height: 56px;
+  }
+
+  &__field--large {
+    height: 73px;
+  }
+}

@@ -12,8 +12,8 @@ export const Default = () => {
   const label = text("Label", "Selectable Checkbox Label");
   const [value, setValue] = React.useState<boolean>(false);
 
-  const onChange = () => {
-    setValue(!value);
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.checked);
   };
 
   return <Checkbox label={label} status={value} onChange={onChange} />;

@@ -7,9 +7,8 @@ class Root extends React.Component {
     checked: undefined
   };
 
-  onChange() {
-    console.log("Ran");
-    this.setState({ checked: !this.state.checked });
+  onChange(event: React.ChangeEvent<HTMLInputElement>) {
+    this.setState({ checked: event.target.checked });
   }
 
   render() {

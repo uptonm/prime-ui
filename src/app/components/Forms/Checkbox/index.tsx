@@ -1,11 +1,12 @@
 import * as React from "react";
 import "./style.scss";
 import { Icon } from "../../Common/Icons";
+import Paragraph from "../../Typeography/Paragraph";
 
 export interface ICheckboxProps {
   label: string;
   status?: boolean;
-  onChange: () => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 }
 
@@ -18,7 +19,9 @@ class Checkbox extends React.Component<ICheckboxProps> {
   render() {
     return (
       <label className="checkbox">
-        {this.props.label}
+        <Paragraph type="callout" color="black">
+          {this.props.label}
+        </Paragraph>
         <input
           type="checkbox"
           checked={this.props.status}

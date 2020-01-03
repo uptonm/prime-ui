@@ -5,12 +5,13 @@
 .checkbox {
   @include prime-font-regular();
   @include border-shapes();
-  display: block;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

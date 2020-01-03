@@ -13,7 +13,11 @@ export interface IDropdownProps {
   onChange: (value: string) => void;
 }
 
-class Dropdown extends React.Component<IDropdownProps> {
+export interface IDropdownState {
+  open: boolean;
+}
+
+class Dropdown extends React.Component<IDropdownProps, IDropdownState> {
   public static defaultProps = {
     size: "medium"
   };
@@ -21,6 +25,21 @@ class Dropdown extends React.Component<IDropdownProps> {
   state = {
     open: false
   };
+
+  escFunction(event: any) {
+    if (event.keyCode === 27) {
+      //Do whatever when esc is pressed
+      this.setState({ open: false });
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.escFunction.bind(this), false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escFunction.bind(this), false);
+  }
 
   renderIcon() {
     return this.state.open ? (

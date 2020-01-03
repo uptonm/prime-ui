@@ -13,7 +13,7 @@
     url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80")
       no-repeat center center fixed;
   background-size: cover;
-  box-shadow: rgba($black, 0.5) 0 4px 8px;
+  box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
   &__content {
     *:not(:last-child) {
       margin-bottom: 10px;

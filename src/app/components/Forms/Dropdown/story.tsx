@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withKnobs, boolean, text, number } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import "../../../styles/base.scss";
 import Dropdown from ".";
 
@@ -13,7 +13,7 @@ export const Medium = () => {
   const label = text("Label", "Dropdown Label");
   const placeholder = text("Placeholder", "Sample Placeholder Text");
 
-  const [options, setOptions] = React.useState<Array<string>>([
+  const [options] = React.useState<Array<string>>([
     "hello",
     "hello2",
     "hello3",
@@ -47,7 +47,7 @@ export const Large = () => {
   const label = text("Label", "Sample Label Text");
   const placeholder = text("Placeholder", "Sample Placeholder Text");
 
-  const [options, setOptions] = React.useState<Array<string>>([
+  const [options] = React.useState<Array<string>>([
     "hello",
     "hello2",
     "hello3",

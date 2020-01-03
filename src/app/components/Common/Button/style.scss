@@ -6,6 +6,7 @@
   color: $white;
   border: none;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
 
   &--small {
     width: 112px;
@@ -24,16 +25,16 @@
   }
 
   &:focus {
-    background-color: $button-focus;
+    background-color: #b7a3fe;
     outline: none;
   }
 
   &:hover {
-    background-color: $button-hover;
+    background-color: #7e66ff;
   }
 
   &:active {
-    background-color: $button-pressed;
+    background-color: #6447ff;
   }
 
   &:disabled {

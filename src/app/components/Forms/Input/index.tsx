@@ -2,6 +2,7 @@ import * as React from "react";
 import Paragraph from "../../Typeography/Paragraph";
 import "./style.scss";
 
+// This is a test to see if it will show up
 export interface IInputProps {
   onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
   size?: "medium" | "large";

@@ -1,41 +1,35 @@
 import * as React from "react";
 import "./styles/base.scss";
-import Input from "./components/Forms/Input";
+import Dropdown from "./components/Forms/Dropdown";
 
-class Root extends React.Component {
+export interface IRootState {
+  options: Array<string>;
+  value: string | undefined;
+}
+class Root extends React.Component<any, IRootState> {
   state = {
-    value: "",
-    errors: undefined
+    options: ["hello", "hello2", "hello3", "hello4", "hello5", "Hello6"],
+    value: undefined
   };
 
-  public changeValue(e: React.ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-    this.setState({
-      ...this.state,
-      value: e.target.value,
-      errors: this.handleErrors(e.target.value)
-    });
-  }
-
-  public handleErrors(input: string) {
-    if (input.length < 3 && input !== "") {
-      return "String must be at least 3 characters";
+  onSelect(value: string) {
+    if (value !== this.state.value) {
+      this.setState({ value });
     } else {
-      return undefined;
+      this.setState({ value: undefined });
     }
   }
 
   render() {
     return (
-      <Input
-        size="medium"
-        disabled={false}
-        label="Sample Input"
-        placeholder="Hello World"
-        value={this.state.value}
-        error={this.state.errors}
-        onChange={this.changeValue.bind(this)}
-      />
+      <div style={{ width: "100%" }}>
+        <Dropdown
+          label="This is a dropdown"
+          options={this.state.options}
+          value={this.state.value}
+          onChange={this.onSelect.bind(this)}
+        />
+      </div>
     );
   }
 }

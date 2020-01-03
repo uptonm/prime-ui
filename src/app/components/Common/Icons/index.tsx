@@ -10,6 +10,7 @@ import Back from "./Common/Back";
 import ChevronDown from "./Common/ChevronDown";
 import ChevronLeft from "./Common/ChevronLeft";
 import ChevronRight from "./Common/ChevronRight";
+import ChevronUp from "./Common/ChevronUp";
 import Close from "./Common/Close";
 import List from "./Common/List";
 import MenuHorizontal from "./Common/MenuHorizontal";
@@ -48,19 +49,19 @@ import Warning from "./Interface/Warning";
 
 export interface SvgProps {
   fill: Colors;
-  outline: boolean;
+  outline: boolean | undefined;
 }
 
 export interface IconComponentProps {
   name: InterfaceIconTypes | UiIconTypes;
   fill?: Colors;
-  outline?: boolean;
+  outline?: boolean | undefined;
 }
 
 export const Icon: React.FC<IconComponentProps> = ({
   name,
   fill = "black",
-  outline = false
+  outline = undefined
 }) => {
   switch (name) {
     /* Common Icons ---------------------------------------------------------------------------- */
@@ -80,6 +81,8 @@ export const Icon: React.FC<IconComponentProps> = ({
       return <ChevronLeft fill={fill} outline={outline} />;
     case "ChevronRight":
       return <ChevronRight fill={fill} outline={outline} />;
+    case "ChevronUp":
+      return <ChevronUp fill={fill} outline={outline} />;
     case "Close":
       return <Close fill={fill} outline={outline} />;
     case "List":

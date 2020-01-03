@@ -7,6 +7,7 @@ export type UiIconTypes =
   | "ChevronDown"
   | "ChevronLeft"
   | "ChevronRight"
+  | "ChevronUp"
   | "Close"
   | "List"
   | "MenuHorizontal"
@@ -53,6 +54,7 @@ export const UiIconList: Array<UiIconTypes> = [
   "ChevronDown",
   "ChevronLeft",
   "ChevronRight",
+  "ChevronUp",
   "Close",
   "List",
   "MenuHorizontal",

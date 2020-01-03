@@ -15,7 +15,7 @@ export const Medium = () => {
   const minLength = number("Minimum Length", 5);
 
   const [value, setValue] = React.useState<string>("");
-  const [errors, setErrors] = React.useState<string>(undefined);
+  const [errors, setErrors] = React.useState<string | undefined>(undefined);
 
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ export const Large = () => {
   const minLength = number("Minimum Length", 5);
 
   const [value, setValue] = React.useState<string>("");
-  const [errors, setErrors] = React.useState<string>(undefined);
+  const [errors, setErrors] = React.useState<string | undefined>(undefined);
 
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();

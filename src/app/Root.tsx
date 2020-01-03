@@ -1,33 +1,24 @@
 import * as React from "react";
 import "./styles/base.scss";
-import Dropdown from "./components/Forms/Dropdown";
+import Checkbox from "./components/Forms/Checkbox";
 
-export interface IRootState {
-  options: Array<string>;
-  value: string | undefined;
-}
-class Root extends React.Component<any, IRootState> {
+class Root extends React.Component {
   state = {
-    options: ["hello", "hello2", "hello3", "hello4", "hello5", "Hello6"],
-    value: undefined
+    checked: undefined
   };
 
-  onSelect(value: string) {
-    if (value !== this.state.value) {
-      this.setState({ value });
-    } else {
-      this.setState({ value: undefined });
-    }
+  onChange() {
+    console.log("Ran");
+    this.setState({ checked: !this.state.checked });
   }
 
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <Dropdown
-          label="This is a dropdown"
-          options={this.state.options}
-          value={this.state.value}
-          onChange={this.onSelect.bind(this)}
+        <Checkbox
+          label="Test Checkbox"
+          status={this.state.checked}
+          onChange={this.onChange.bind(this)}
         />
       </div>
     );

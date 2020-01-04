@@ -1,28 +1,28 @@
 import * as React from "react";
 import "./styles/base.scss";
 import { RadioGroup } from "./components/Forms/Radio";
+import ToggleSwitch from "./components/Forms/ToggleSwitch";
 
 class Root extends React.Component<
   any,
-  { value: string; options: Array<string> }
+  { value: boolean | undefined; label: string }
 > {
   state = {
-    value: "",
-    options: ["option 1", "option 2", "option 3", "option 4", "option 5"]
+    value: false,
+    label: "Sample Toggle Switch"
   };
 
-  onChangeHandler(name: string) {
-    this.setState({ value: name });
+  onChangeHandler() {
+    this.setState({ value: !this.state.value });
   }
 
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <RadioGroup
-          type="horizontal"
-          options={this.state.options}
+        <ToggleSwitch
           value={this.state.value}
-          onChangeHandler={this.onChangeHandler.bind(this)}
+          label={this.state.label}
+          onChange={this.onChangeHandler.bind(this)}
         />
       </div>
     );

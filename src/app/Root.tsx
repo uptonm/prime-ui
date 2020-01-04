@@ -2,29 +2,23 @@ import * as React from "react";
 import "./styles/base.scss";
 import { RadioGroup } from "./components/Forms/Radio";
 import ToggleSwitch from "./components/Forms/ToggleSwitch";
+import Slider from "./components/Forms/Slider";
 
-class Root extends React.Component<
-  any,
-  { value: boolean | undefined; label: string }
-> {
+class Root extends React.Component<any, any> {
   state = {
-    value: false,
-    label: "Sample Toggle Switch"
+    value: 50
   };
 
-  onChangeHandler() {
-    this.setState({ value: !this.state.value });
+  onChangeHandler(value: number) {
+    this.setState({ value });
   }
 
   render() {
     return (
-      <div style={{ width: "100%" }}>
-        <ToggleSwitch
-          value={this.state.value}
-          label={this.state.label}
-          onChange={this.onChangeHandler.bind(this)}
-        />
-      </div>
+      <Slider
+        value={this.state.value}
+        onChange={this.onChangeHandler.bind(this)}
+      />
     );
   }
 }

@@ -17,32 +17,32 @@
     width: 0;
     height: 0;
   }
-}
 
-/* The slider */
-.slider {
-  display: inline-block;
-  position: absolute;
-  cursor: pointer;
-  width: 48px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-
-  &:before {
+  /* The slider */
+  .slider {
+    display: inline-block;
     position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 3px;
-    background-color: white;
+    cursor: pointer;
+    width: 48px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 4px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
   }
 }
 

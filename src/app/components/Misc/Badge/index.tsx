@@ -31,6 +31,7 @@ class Badge extends React.Component<BadgeProps> {
         {this.props.icon ? (
           <Icon
             name={this.props.icon}
+            outline={true}
             fill={
               this.blackText.includes(this.props.color as Colors)
                 ? "black"

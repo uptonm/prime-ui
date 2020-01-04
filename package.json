@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook --port 6006",
     "svgr": "svgr -d src/temp/dest/ src/temp/source/"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "@svgr/cli": "^5.0.0",
     "babel-loader": "^8.0.6",
     "fork-ts-checker-webpack-plugin": "^3.1.1",
+    "loki": "^0.18.1",
     "react-docgen-typescript-loader": "^3.6.0",
     "storybook-dark-mode": "^0.2.0",
     "ts-loader": "^6.2.1"
@@ -51,5 +52,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "loki": {
+    "diffingEngine": "gm",
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

@@ -1,16 +1,15 @@
 import * as React from "react";
 import "./style.scss";
-import { Icon } from "../../Common/Icons";
 import Paragraph from "../../Typeography/Paragraph";
 
-export interface ICheckboxProps {
+export interface IRadioProps {
   label: string;
   status?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
 }
 
-class Checkbox extends React.Component<ICheckboxProps> {
+class Radio extends React.Component<IRadioProps> {
   public static defaultProps = {
     status: false,
     disabled: false
@@ -18,31 +17,29 @@ class Checkbox extends React.Component<ICheckboxProps> {
 
   render() {
     return (
-      <label className="checkbox">
-        <Paragraph type="callout" color="black">
-          {this.props.label}
-        </Paragraph>
+      <label className="radio">
         <input
           name={this.props.label}
-          type="checkbox"
+          type="radio"
           checked={this.props.status}
           onChange={this.props.onChange}
         />
-        <span className="checkbox__checkmark medium-radius">
-          {this.props.status === true && <Icon fill="white" name="Ok" />}
-        </span>
+        <span className="radio__checkmark medium-radius"></span>
+        <Paragraph type="callout" color="black">
+          {this.props.label}
+        </Paragraph>
       </label>
     );
   }
 }
 
-export interface ICheckboxGroupProps {
+export interface IRadioGroupProps {
   onChangeHandler: (name: string) => void;
   type?: "vertical" | "horizontal";
   options: Array<string>;
-  value: Array<string>;
+  value: string;
 }
-class CheckboxGroup extends React.Component<ICheckboxGroupProps> {
+class RadioGroup extends React.Component<IRadioGroupProps> {
   public static defaultProps = {
     type: "vertical"
   };
@@ -54,16 +51,16 @@ class CheckboxGroup extends React.Component<ICheckboxGroupProps> {
   render() {
     return (
       <div
-        className={`checkbox__group ${
-          this.props.type === "vertical" ? "checkbox__group--vertical" : ""
+        className={`radio__group ${
+          this.props.type === "vertical" ? "radio__group--vertical" : ""
         }`}
       >
         {this.props.options.map((option: string, index: number) => {
           return (
-            <Checkbox
+            <Radio
               key={index}
               label={option}
-              status={this.props.value.includes(option)}
+              status={this.props.value === option}
               onChange={this.onChange.bind(this)}
             />
           );
@@ -73,5 +70,5 @@ class CheckboxGroup extends React.Component<ICheckboxGroupProps> {
   }
 }
 
-export default Checkbox;
-export { CheckboxGroup };
+export default Radio;
+export { RadioGroup };

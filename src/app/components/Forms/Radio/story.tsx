@@ -1,11 +1,11 @@
 import * as React from "react";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
-import Checkbox, { CheckboxGroup } from ".";
+import Radio, { RadioGroup } from ".";
 
 export default {
-  title: "Components|Forms/Checkbox",
+  title: "Components|Forms/Radio",
   decorators: [withKnobs],
-  component: Checkbox
+  component: Radio
 };
 
 export const Default = () => {
@@ -16,12 +16,12 @@ export const Default = () => {
     setValue(e.target.checked);
   };
 
-  return <Checkbox label={label} status={value} onChange={onChange} />;
+  return <Radio label={label} status={value} onChange={onChange} />;
 };
 
-export const Checkbox_Group = () => {
+export const Radio_Group = () => {
   const type = select("Type", ["horizontal", "vertical"], "horizontal");
-  const [value, setValue] = React.useState<Array<string>>([]);
+  const [value, setValue] = React.useState<string>("");
   const options: Array<string> = [
     "option 1",
     "option 2",
@@ -31,16 +31,11 @@ export const Checkbox_Group = () => {
   ];
 
   const onChangeHandler = (name: string) => {
-    if (!value.includes(name)) {
-      setValue([...value, name]);
-    } else {
-      const removed = value.filter((value: string) => value !== name);
-      setValue(removed);
-    }
+    setValue(name);
   };
 
   return (
-    <CheckboxGroup
+    <RadioGroup
       type={type}
       options={options}
       value={value}

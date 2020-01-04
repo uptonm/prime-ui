@@ -1,23 +1,28 @@
 import * as React from "react";
 import "./styles/base.scss";
-import Checkbox from "./components/Forms/Checkbox";
+import { RadioGroup } from "./components/Forms/Radio";
 
-class Root extends React.Component {
+class Root extends React.Component<
+  any,
+  { value: string; options: Array<string> }
+> {
   state = {
-    checked: undefined
+    value: "",
+    options: ["option 1", "option 2", "option 3", "option 4", "option 5"]
   };
 
-  onChange(event: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({ checked: event.target.checked });
+  onChangeHandler(name: string) {
+    this.setState({ value: name });
   }
 
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <Checkbox
-          label="Test Checkbox"
-          status={this.state.checked}
-          onChange={this.onChange.bind(this)}
+        <RadioGroup
+          type="horizontal"
+          options={this.state.options}
+          value={this.state.value}
+          onChangeHandler={this.onChangeHandler.bind(this)}
         />
       </div>
     );

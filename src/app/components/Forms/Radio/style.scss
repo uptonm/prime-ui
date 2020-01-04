@@ -2,10 +2,10 @@
 @import "../../../styles/colors";
 @import "../../../styles/shapes";
 
-.checkbox {
+.radio {
   @include prime-font-regular();
   @include border-shapes();
-  height: 25px;
+  height: 26px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -26,53 +26,44 @@
   }
 
   &__checkmark {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
-    padding: 1.5px;
+    height: 26px;
+    width: 26px;
     background-color: transparent;
-    border: 1.5px solid $primary;
+    border: 2px solid $primary;
+    border-radius: 50% !important;
 
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    margin-right: 10px;
 
-  &:hover input ~ .checkbox__checkmark {
+    &::after {
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      height: 13px;
+      width: 13px;
+    }
+  }
+  & &:hover input ~ .radio__checkmark {
     background-color: $light;
   }
 
-  & input:checked ~ .checkbox__checkmark {
-    background-color: $primary;
-  }
-
-  &__checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  &__checkbox input:checked ~ .checkbox__checkmark:after {
+  & input:checked ~ .radio__checkmark::after {
     display: block;
-  }
-
-  &__checkbox .checkmark__checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    content: "";
+    border-radius: 50%;
+    background-color: $primary;
+    transform: translate(-50%, -50%);
   }
 }
 
-.checkbox__group {
-  .checkbox:not(:last-child) {
+.radio__group {
+  .radio:not(:last-child) {
     margin-right: 15px;
   }
 
@@ -81,7 +72,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    .checkbox.checkbox:not(:last-child) {
+    .radio.radio:not(:last-child) {
       margin: 0 0 15px 0 !important;
     }
   }

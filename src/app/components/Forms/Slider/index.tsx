@@ -1,11 +1,13 @@
 import * as React from "react";
 import "./style.scss";
+import Paragraph from "../../Typeography/Paragraph";
 
 export interface ISliderProps {
   min?: number;
   max?: number;
-  interval?: number;
   value: number;
+  label?: string;
+  interval?: number;
   onChange: (value: number) => void;
 }
 
@@ -27,6 +29,9 @@ class Slider extends React.Component<ISliderProps> {
   render() {
     return (
       <div className="slider__container">
+        {this.props.label && (
+          <Paragraph type="callout">{this.props.label}</Paragraph>
+        )}
         <input
           id="myRange"
           type="range"

@@ -1,7 +1,13 @@
 @import "../../../styles/colors";
 
 .slider__container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  p {
+    margin-bottom: 15px;
+  }
 
   .slider {
     -webkit-appearance: none;

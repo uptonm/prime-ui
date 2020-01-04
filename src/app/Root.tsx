@@ -1,24 +1,31 @@
 import * as React from "react";
+import Image from "../static/images/desert.png";
+import { InitialAvatar, ImageAvatar } from "./components/Misc/Avatar";
 import "./styles/base.scss";
-import { RadioGroup } from "./components/Forms/Radio";
-import ToggleSwitch from "./components/Forms/ToggleSwitch";
-import Slider from "./components/Forms/Slider";
 
 class Root extends React.Component<any, any> {
-  state = {
-    value: 50
-  };
-
-  onChangeHandler(value: number) {
-    this.setState({ value });
-  }
-
   render() {
     return (
-      <Slider
-        value={this.state.value}
-        onChange={this.onChangeHandler.bind(this)}
-      />
+      <>
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <InitialAvatar initials="MU" size="small" />
+          <InitialAvatar initials="MU" />
+          <InitialAvatar initials="MU" size="large" />
+        </div>
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <ImageAvatar
+            image_url={Image}
+            image_alt="Mike's Avatar"
+            size="small"
+          />
+          <ImageAvatar image_url={Image} image_alt="Mike's Avatar" />
+          <ImageAvatar
+            image_url={Image}
+            image_alt="Mike's Avatar"
+            size="large"
+          />
+        </div>
+      </>
     );
   }
 }

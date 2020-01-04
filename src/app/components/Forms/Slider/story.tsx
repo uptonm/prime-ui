@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Slider from ".";
 import Paragraph from "../../Typeography/Paragraph";
 
@@ -10,16 +10,12 @@ export default {
 };
 
 export const Default = () => {
+  const label = text("Label", "How Satisfied Have You Been?");
   const [value, setValue] = React.useState<number>(50);
 
   const handleChange = (v: number) => {
     setValue(v);
   };
 
-  return (
-    <>
-      <Slider value={value} onChange={handleChange} />
-      <Paragraph type="callout">{value}</Paragraph>
-    </>
-  );
+  return <Slider label={label} value={value} onChange={handleChange} />;
 };

@@ -1,0 +1,51 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+
+  &--initials {
+    background-color: $primary;
+    position: relative;
+
+    .avatar__initials {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      @include prime-font-regular();
+      color: white;
+    }
+  }
+
+  &--small {
+    height: 32px;
+    width: 32px;
+    .avatar__initials {
+      font-size: 11px;
+    }
+  }
+
+  &--medium {
+    height: 48px;
+    width: 48px;
+    .avatar__initials {
+      font-size: 17px;
+    }
+  }
+
+  &--large {
+    height: 80px;
+    width: 80px;
+    .avatar__initials {
+      font-size: 28px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+}

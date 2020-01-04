@@ -1,7 +1,6 @@
 import * as React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import Slider from ".";
-import Paragraph from "../../Typeography/Paragraph";
 
 export default {
   title: "Components|Forms/Slider",

@@ -15,6 +15,9 @@ class Badge extends React.Component<BadgeProps> {
   public static defaultProps = {
     color: "primary"
   };
+
+  blackText: Array<Colors> = ["white", "light", "medium", "dark"];
+
   render() {
     return (
       <span
@@ -25,8 +28,26 @@ class Badge extends React.Component<BadgeProps> {
           circle-radius
         `}
       >
-        {this.props.icon ? <Icon name={this.props.icon} fill="white" /> : ""}
-        <Paragraph type="callout" color="white">
+        {this.props.icon ? (
+          <Icon
+            name={this.props.icon}
+            fill={
+              this.blackText.includes(this.props.color as Colors)
+                ? "black"
+                : "white"
+            }
+          />
+        ) : (
+          ""
+        )}
+        <Paragraph
+          type="callout"
+          color={
+            this.blackText.includes(this.props.color as Colors)
+              ? "black"
+              : "white"
+          }
+        >
           {this.props.label}
         </Paragraph>
       </span>

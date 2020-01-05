@@ -65,7 +65,6 @@
   },
   "loki": {
     "chromeSelector": ".wrapper > *, #root > *",
-    "diffingEngine": "gm",
     "configurations": {
       "chrome.macbook": {
         "target": "chrome.docker",

@@ -1,4 +1,4 @@
-name: CI
+name: Loki Testing
 
 on: [push]
 
@@ -26,9 +26,7 @@ jobs:
     - uses: actions/cache@v1
       with:
         path: ${{ steps.yarn-cache.outputs.dir }}
-        key: ${{ runner.os }}:yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
+        key: ${{ runner.os }}:loki-testing
           
       # Install Dependencies if not Cached
     - name: Install Dependencies

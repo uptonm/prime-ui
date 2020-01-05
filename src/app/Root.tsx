@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./styles/base.scss";
-import Menu from "./components/Common/Menu";
+import { NavBar } from "./components/Page/NavigationBar";
 
 class Root extends React.Component<any, any> {
   list = [
@@ -10,7 +10,7 @@ class Root extends React.Component<any, any> {
   render() {
     return (
       <>
-        <Menu options={this.list} />
+        <NavBar />
       </>
     );
   }

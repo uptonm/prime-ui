@@ -3,10 +3,14 @@
 
 .btn {
   background-color: $primary;
-  color: $white;
+  cursor: pointer;
   border: none;
   transition: all 0.2s ease;
   box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
+
+  p {
+    color: $white;
+  }
 
   &--small {
     width: 112px;
@@ -22,6 +26,14 @@
     width: 128px;
     height: 56px;
     border-radius: 16px;
+  }
+
+  &--outline {
+    background-color: transparent !important;
+    box-shadow: none;
+    p {
+      color: $primary !important;
+    }
   }
 
   &:focus {

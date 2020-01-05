@@ -2,16 +2,34 @@
 @import "../../../styles/fonts";
 
 .menu {
-  width: 232px;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
   background-color: $white;
   border-radius: 8px;
   padding: 16px;
 
+  &__auth {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    *:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__auth-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   &__option {
-    height: 32px;
-    width: 200px;
+    height: 36px;
     border-radius: 4px;
+    &--large {
+      height: 100%;
+    }
   }
 
   &__option-link:link,
@@ -30,6 +48,10 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 8px;
+
+    *:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &__option-link:hover {

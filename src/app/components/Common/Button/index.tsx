@@ -29,10 +29,7 @@ class Button extends React.Component<IButtonProps> {
         } ${this.props.color}-bg ${this.props.radius}-radius`}
         disabled={this.props.disabled}
       >
-        <Paragraph
-          type={this.props.size === "small" ? "caption" : "body"}
-          color="white"
-        >
+        <Paragraph type={this.props.size === "small" ? "caption" : "body"}>
           {this.props.children}
         </Paragraph>
       </button>

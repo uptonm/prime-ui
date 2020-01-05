@@ -1,0 +1,44 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout Codebase
+    - uses: actions/checkout@v1
+      
+      # Set Node Version
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        
+      # Get Cached Dependencies if Existing      
+    - name: Get yarn cache
+      id: yarn-cache
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+      
+      # Caching of Dependencies
+    - uses: actions/cache@v1
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}:yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+          
+      # Install Dependencies if not Cached
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install --silent
+          
+      # Run Storybook Build & Generate Static UI Build
+    - name: Run Storybook Build
+      run: yarn storybook:build
+    
+    - name: Run Loki Test
+      run: yarn loki:test:ci
+      

@@ -1,16 +1,16 @@
 import * as React from "react";
 import "./styles/base.scss";
-import Card from "./components/Common/Card";
+import Menu from "./components/Common/Menu";
 
 class Root extends React.Component<any, any> {
+  list = [
+    { label: "First Item", href: "#" },
+    { label: "Second Item", href: "#" }
+  ];
   render() {
     return (
       <>
-        <Card
-          title="Card Title"
-          content="Card text content with two lines for long descriptions."
-          action="Button"
-        />
+        <Menu options={this.list} />
       </>
     );
   }

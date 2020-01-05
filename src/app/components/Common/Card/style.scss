@@ -2,7 +2,7 @@
 @import "../../../styles/gradients";
 @import "../../../styles/fonts";
 
-.card {
+.overlay-card {
   position: relative;
   height: 360px;
   width: 288px;
@@ -30,5 +30,73 @@
     *:not(:last-child) {
       margin-bottom: 10px;
     }
+  }
+}
+
+.info-card {
+  position: relative;
+  height: 206px;
+  width: 288px;
+  display: flex;
+  align-items: center;
+  padding: 32px 32px;
+  border-radius: 24px;
+  background-color: $white;
+  box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
+  overflow: hidden;
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+  }
+
+  &__content {
+    *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--no-action {
+    height: 156px !important;
+  }
+}
+
+.card {
+  position: relative;
+  height: 360px;
+  width: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 24px;
+  background: linear-gradient(
+    to right,
+    rgba(#000, 0.5) 0%,
+    rgba(#000, 0.5) 100%
+  );
+  box-shadow: 0 4px 8px rgba(#3860a5, 0.15);
+  overflow: hidden;
+
+  &__background-image {
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px;
+    background-color: $white;
+    *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--no-action {
+    height: 310px !important;
   }
 }

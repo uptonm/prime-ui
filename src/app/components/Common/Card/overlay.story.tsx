@@ -1,11 +1,11 @@
 import * as React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Card from ".";
+import { OverlayCard } from ".";
 
 export default {
-  title: "Components|Common/Card",
+  title: "Components|Common/Card/OverlayCard",
   decorators: [withKnobs],
-  component: Card
+  component: OverlayCard
 };
 
 export const Default = () => {
@@ -13,7 +13,9 @@ export const Default = () => {
     "Content",
     "Card text content with two lines for long descriptions."
   );
-  return <Card title="Hello World" content={content} action="Click Me" />;
+  return (
+    <OverlayCard title="Hello World" content={content} action="Click Me" />
+  );
 };
 
 export const NoAction = () => {
@@ -21,9 +23,9 @@ export const NoAction = () => {
     "Content",
     "Card text content with two lines for long descriptions."
   );
-  return <Card title="Hello World" content={content} />;
+  return <OverlayCard title="Hello World" content={content} />;
 };
 
 export const NoAction_NoContent = () => {
-  return <Card title="Hello World" />;
+  return <OverlayCard title="Hello World" />;
 };

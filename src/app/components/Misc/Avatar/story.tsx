@@ -1,7 +1,7 @@
 import * as React from "react";
 import { select, withKnobs, text } from "@storybook/addon-knobs";
 import { InitialAvatar, ImageAvatar } from ".";
-import AvatarImage from "../../../../static/images/desert.png";
+import AvatarImage from "../../../../static/images/desert.jpeg";
 
 export default {
   title: "Components|Misc/Avatar",

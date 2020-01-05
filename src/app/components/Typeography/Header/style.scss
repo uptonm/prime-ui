@@ -5,42 +5,50 @@
 @include text-neutral-colors;
 
 .header {
+  display: block;
   @include prime-font-regular();
   font-weight: normal;
   margin: 0;
   &--h1 {
     font-size: 80px;
     line-height: 97px;
+    letter-spacing: -0.96px;
   }
 
   &--h2 {
     font-size: 64px;
     line-height: 78px;
+    letter-spacing: -0.76px;
   }
 
   &--h3 {
     font-size: 48px;
     line-height: 58px;
+    letter-spacing: -0.58px;
   }
 
   &--h4 {
     font-size: 40px;
     line-height: 49px;
+    letter-spacing: -0.48px;
   }
 
   &--h5 {
     font-size: 34px;
     line-height: 41px;
+    letter-spacing: -0.11px;
   }
 
   &--h6 {
     font-size: 28px;
     line-height: 34px;
+    letter-spacing: 0.13px;
   }
 
   &--subtitle {
     @include prime-font-semibold();
     font-size: 17px;
     line-height: 22px;
+    letter-spacing: -0.24px;
   }
 }

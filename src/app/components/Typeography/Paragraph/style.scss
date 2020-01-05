@@ -2,6 +2,7 @@
 @import "../../../styles/colors";
 
 .paragraph {
+  display: block;
   margin: 0;
   padding: 0;
   color: $black;
@@ -9,31 +10,37 @@
   &--body {
     font-size: 17px;
     line-height: 27px;
+    letter-spacing: -0.24px;
   }
 
   &--callout {
     font-size: 16px;
     line-height: 21px;
+    letter-spacing: -0.2px;
   }
 
   &--subhead {
     font-size: 15px;
     line-height: 20px;
+    letter-spacing: -0.15px;
   }
 
   &--footnote {
     font-size: 13px;
     line-height: 18px;
+    letter-spacing: -0.06px;
   }
 
   &--caption {
     font-size: 12px;
     line-height: 16px;
+    letter-spacing: 0px;
   }
 
   &--small {
     font-size: 11px;
     line-height: 13px;
+    letter-spacing: 0.06px;
   }
 }
 

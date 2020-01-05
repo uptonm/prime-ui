@@ -62,8 +62,13 @@
     ]
   },
   "loki": {
+    "chromeSelector": ".wrapper > *, #root > *",
     "diffingEngine": "gm",
     "configurations": {
+      "chrome.macbook": {
+        "target": "chrome.docker",
+        "preset": "Retina Macbook Pro 15"
+      },
       "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,
@@ -73,7 +78,8 @@
       },
       "chrome.iphone7": {
         "target": "chrome.docker",
-        "preset": "iPhone 7"
+        "preset": "iPhone 7",
+        "mobile": true
       }
     }
   },

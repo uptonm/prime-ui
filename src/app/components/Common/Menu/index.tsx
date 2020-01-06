@@ -29,7 +29,7 @@ class Menu extends React.Component<MenuProps> {
       <div className="menu" style={this.props.style}>
         {this.props.auth && (
           <div className="menu__option menu__option--large">
-            <a className="menu__option-link" href={"#"}>
+            <a className="menu__option-link" href={"/"}>
               <div className="menu__auth">
                 <ImageAvatar image_url={Image} image_alt="Avatar" />
                 <div className="menu__auth-name">
@@ -59,4 +59,20 @@ class Menu extends React.Component<MenuProps> {
   }
 }
 
-export default Menu;
+export interface MenuLinkProps {
+  icon?: UiIconTypes | InterfaceIconTypes;
+  href: string;
+  label: string;
+}
+const MenuLink: React.FC<MenuLinkProps> = ({ icon, href, label }) => {
+  return (
+    <div className="menu__option">
+      <a className="menu__option-link" href={href}>
+        {icon ? <Icon name={icon} fill="black" /> : ""}
+        <span className="menu__option-link-container">{label}</span>
+      </a>
+    </div>
+  );
+};
+
+export { Menu, MenuLink };

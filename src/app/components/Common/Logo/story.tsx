@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
 import Logo from ".";
 
 export default {
@@ -9,6 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  const content = text("Content", "Learn More");
   return <Logo />;
 };

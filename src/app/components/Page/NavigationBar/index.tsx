@@ -6,7 +6,7 @@ import Paragraph from "../../Typeography/Paragraph";
 import { ImageAvatar } from "../../Misc/Avatar";
 import Image from "../../../../static/images/desert.jpeg";
 import HamburgerMenu from "react-hamburger-menu";
-import Menu from "../../Common/Menu";
+import { Menu, MenuOption } from "../../Common/Menu";
 
 export type UserAuth = {
   full_name: string;
@@ -60,7 +60,11 @@ class NavBar extends React.Component<NavBarProps> {
   }
 }
 
-class MobileNavBar extends React.Component<NavBarProps> {
+export interface MobileNavbarState {
+  open: boolean;
+  options: Array<MenuOption>;
+}
+class MobileNavBar extends React.Component<NavBarProps, MobileNavbarState> {
   public static defaultProps = {
     auth: undefined
   };
@@ -73,7 +77,7 @@ class MobileNavBar extends React.Component<NavBarProps> {
       { label: "Categories", href: "#", icon: "List" },
       { label: "Profile", href: "#", icon: "User" },
       { label: "Settings", href: "#", icon: "Settings" }
-    ]
+    ] as Array<MenuOption>
   };
 
   renderAuth() {

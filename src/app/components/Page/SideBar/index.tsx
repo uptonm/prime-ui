@@ -70,9 +70,9 @@ class SideBar extends React.Component<SidebarProps> {
             menuClicked={this.props.onClose}
             width={18}
             height={15}
-            strokeWidth={1}
+            strokeWidth={2}
             rotate={0}
-            color="black"
+            color={this.props.open ? "black" : "#9bb1c8"}
             borderRadius={0}
             animationDuration={0.5}
           />

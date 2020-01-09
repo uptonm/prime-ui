@@ -1,0 +1,38 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+.footer {
+  height: 256px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__column {
+    list-style: none;
+  }
+
+  &__column-header {
+    @include prime-font-regular();
+    color: $dark;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    letter-spacing: -0.06px;
+  }
+
+  &__column-item {
+  }
+
+  &__column-link:visited,
+  &__column-link:link {
+    color: $black;
+    text-decoration: none;
+  }
+}

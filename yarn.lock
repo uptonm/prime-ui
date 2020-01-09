@@ -1479,6 +1479,25 @@
     react-lifecycles-compat "^3.0.4"
     react-select "^3.0.0"
 
+"@storybook/addon-storysource@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.2.8.tgz#5527c6ef022e0b284a18de7ea907645390965ea7"
+  integrity sha512-Lse1nIruOU01DQqfeBSoh1ha79tR8M879Juzmp439P3c4PTqc8i/p8dazE5n8H5kgWijfc8tuPHmzZT43l/yXQ==
+  dependencies:
+    "@storybook/addons" "5.2.8"
+    "@storybook/components" "5.2.8"
+    "@storybook/router" "5.2.8"
+    "@storybook/source-loader" "5.2.8"
+    "@storybook/theming" "5.2.8"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    react-syntax-highlighter "^8.0.1"
+    regenerator-runtime "^0.12.1"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-viewport@^5.2.8":
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.2.8.tgz#b3bdbae1e240dcb19aed7a6c70bfad564f40d84b"

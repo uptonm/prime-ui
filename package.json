@@ -26,6 +26,7 @@
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.2.8",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/theming": "^5.2.8",
     "@svgr/cli": "^5.0.0",
     "@types/enzyme": "^3.10.4",

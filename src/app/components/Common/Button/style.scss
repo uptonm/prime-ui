@@ -36,6 +36,23 @@
     }
   }
 
+  .group-left-piece {
+    border-bottom-right-radius: none !important;
+    border-top-right-radius: none !important;
+  }
+
+  .group-middle-piece {
+    border-bottom-left-radius: none !important;
+    border-top-left-radius: none !important;
+    border-bottom-right-radius: none !important;
+    border-top-right-radius: none !important;
+  }
+
+  .group-right-piece {
+    border-bottom-left-radius: none !important;
+    border-top-left-radius: none !important;
+  }
+
   &:focus {
     background-color: #b7a3fe;
     outline: none;

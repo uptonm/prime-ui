@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Colors } from "../../../models/ui/colors";
 import Paragraph from "../../Typeography/Paragraph";
-import { Borders, GroupPlacement } from "../../../models/ui/shapes";
+import { Borders } from "../../../models/ui/shapes";
 import "./style.scss";
 
 export interface IButtonProps {
@@ -10,8 +10,7 @@ export interface IButtonProps {
   color?: Colors;
   outline?: boolean;
   radius?: Borders;
-  inGroup?: boolean;
-  groupPlacement?: GroupPlacement;
+  className?: string;
 }
 
 class Button extends React.Component<IButtonProps> {
@@ -20,8 +19,7 @@ class Button extends React.Component<IButtonProps> {
     color: "primary",
     outline: false,
     radius: "large",
-    inGroup: false,
-    groupPlacement: null
+    className: null
   };
 
   render() {
@@ -30,7 +28,7 @@ class Button extends React.Component<IButtonProps> {
       <button
         className={`btn ${this.props.outline ? "btn--outline" : ""} btn--${
           this.props.size
-          } ${this.props.color}-bg ${this.props.radius}-radius ${this.props.inGroup} ? ${this.props.groupPlacement} : ""`}
+          } ${this.props.color}-bg ${this.props.radius}-radius ${this.props.className}`}
         disabled={this.props.disabled}
       >
         <Paragraph type={this.props.size === "small" ? "caption" : "body"}>

@@ -7,6 +7,7 @@ export interface IParagraphProps {
   style?: object;
   type?: ParagraphTypes;
   color?: Colors;
+  className?: string;
 }
 
 class Paragraph extends React.Component<IParagraphProps> {
@@ -19,7 +20,7 @@ class Paragraph extends React.Component<IParagraphProps> {
     return (
       <p
         style={this.props.style}
-        className={`paragraph paragraph--${this.props.type} ${this.props.color}-text`}
+        className={`paragraph paragraph--${this.props.type} ${this.props.color}-text ${this.props.className}`}
       >
         {this.props.children}
       </p>

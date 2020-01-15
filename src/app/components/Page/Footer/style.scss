@@ -19,7 +19,7 @@
 
   &__content {
     padding-top: 16px;
-    min-width: 50%;
+    width: 499px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -27,7 +27,14 @@
   }
 
   &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     list-style: none;
+  }
+
+  &__column-container {
+    flex: 1;
   }
 
   &__column-header {
@@ -51,7 +58,12 @@
     letter-spacing: -0.06px;
   }
 
+  &__column-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
   &__social {
+    width: 287px;
     padding-top: 16px;
     display: flex;
     flex-direction: column;
@@ -65,6 +77,8 @@
   &__social-links {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &__social-link:link,

@@ -14,8 +14,30 @@ $border-shapes: (
 
 @mixin border-shapes {
   @each $name, $size in $border-shapes {
-    .#{$name}-radius {
-      border-radius: $size;
-    }
+    // Check if object has group property and value
+    @if ($inGroup) {
+      @if ($groupPlacement == "left") {
+        .#{$name}-radius {
+          border-bottom-right-radius: none;
+          border-top-right-radius: none;
+        }
+      } @else if ($groupPlacement == "right") {
+        .#{$name}-radius {
+          border-bottom-left-radius: none;
+          border-top-left-radius: none;
+        }
+      } else {
+        .#{$name}-radius {
+          border-bottom-left-radius: none;
+          border-top-left-radius: none;
+          border-bottom-right-radius: none;
+          border-top-right-radius: none;
+        }
+      }
+    } @else {
+      .#{$name}-radius {
+        border-radius: $size;
+      }
+    }  
   }
 }

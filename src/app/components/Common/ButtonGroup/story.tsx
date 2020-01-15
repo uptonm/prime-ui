@@ -8,10 +8,10 @@ import { BorderTypes, Borders } from "../../../models/ui/shapes";
 export default {
   title: "Components|Common/ButtonGroup",
   decorators: [withKnobs],
-  component: ButtonGroup
+  component: Button, ButtonGroup
 };
 
-export const ButtonGroup1 = () => {
+export const SmallButtonGroup = () => {
   const content = text("Content", "Submit");
   const color = select("Color", ColorList, "primary");
   const border = select("Radius", BorderTypes, "large");

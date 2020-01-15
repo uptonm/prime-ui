@@ -11,7 +11,7 @@
     "loki:commit": "loki update",
     "storybook": "start-storybook --port 6006",
     "storybook:build": "build-storybook -s public",
-    "storybook:deploy": "storybook-to-ghpages",
+    "storybook:deploy": "storybook-to-ghpages -o ./storybook-static",
     "svgr": "svgr -d src/temp/dest/ src/temp/source/"
   },
   "devDependencies": {

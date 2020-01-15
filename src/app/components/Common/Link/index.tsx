@@ -2,11 +2,11 @@ import * as React from "react";
 import "./style.scss";
 import { Icon } from "../Icons";
 
-export interface ILinkProps {
+export interface LinkProps {
   to: string;
 }
 
-class Link extends React.Component<ILinkProps> {
+class Link extends React.Component<LinkProps> {
   render() {
     return (
       <a href={this.props.to} className="link">

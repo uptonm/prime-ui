@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Footer, { FooterColumn, Social } from ".";
 
 export default {
@@ -47,10 +47,15 @@ const fakeSocial: Social = {
   github: "https://github.com"
 };
 
+const fakeMessage: string =
+  "Prime Design System Kit is well known, time-saving design resource for Sketch. Thanks to its features you are able to design 10 times faster.";
+
 export const Footer_ = () => {
-  return <Footer columns={fakeColumns} />;
+  const message = text("Message", fakeMessage);
+  return <Footer columns={fakeColumns} message={message} />;
 };
 
 export const Footer_With_Social = () => {
-  return <Footer columns={fakeColumns} social={fakeSocial} />;
+  const message = text("Message", fakeMessage);
+  return <Footer columns={fakeColumns} social={fakeSocial} message={message} />;
 };

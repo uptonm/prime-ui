@@ -8,6 +8,7 @@ import Input from "../../Forms/Input";
 export interface FooterProps {
   columns: FooterColumn[];
   social?: Social;
+  message?: string;
 }
 
 export type Social = {
@@ -125,11 +126,17 @@ class Footer extends React.Component<FooterProps> {
       <div className="footer">
         <div className="footer__logo">
           <Logo />
-          <Paragraph type="footnote" color="dark" className="footer__logo-text">
-            Prime Design System Kit is well known, time-saving design resource
-            for Sketch. Thanks to its features you are able to design 10 times
-            faster.
-          </Paragraph>
+          {this.props.message ? (
+            <Paragraph
+              type="footnote"
+              color="dark"
+              className="footer__logo-text"
+            >
+              {this.props.message}
+            </Paragraph>
+          ) : (
+            ""
+          )}
         </div>
         <div className="footer__content">{this.renderFooterContent()}</div>
         <div className="footer__social">{this.renderSocial()}</div>

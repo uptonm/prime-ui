@@ -26,7 +26,7 @@ class Button extends React.Component<IButtonProps> {
       <button
         className={`btn ${this.props.outline ? "btn--outline" : ""} btn--${
           this.props.size
-        } ${this.props.color}-bg ${this.props.radius}-radius`}
+          } ${this.props.color}-bg ${this.props.radius}-radius`}
         disabled={this.props.disabled}
       >
         <Paragraph type={this.props.size === "small" ? "caption" : "body"}>

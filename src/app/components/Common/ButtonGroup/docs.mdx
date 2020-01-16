@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import ButtonGroup from ".";
+
+<Meta title="Button" component={ButtonGroup} />
+
+# ButtonGroup
+
+With `MDX` we can define a story for `ButtonGroup` right in the middle of our
+markdown documentation.
+
+<Preview>
+  <Story name="all checkboxes">
+    <form>
+      <ButtonGroup>
+        <Button>Button Content!!!</Button>
+        <Button>Button Content!!!</Button>
+        <Button>Button Content!!!</Button>
+      </ButtonGroup>
+    </form>
+  </Story>
+</Preview>

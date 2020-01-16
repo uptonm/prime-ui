@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/main.css",
+    "main.js": "/main.939066a290695a10f0ed.bundle.js",
+    "main.css.map": "/main.css.map",
+    "main.js.map": "/main.939066a290695a10f0ed.bundle.js.map",
+    "runtime~main.js": "/runtime~main.939066a290695a10f0ed.bundle.js",
+    "runtime~main.js.map": "/runtime~main.939066a290695a10f0ed.bundle.js.map",
+    "vendors~main.css": "/vendors~main.css",
+    "vendors~main.js": "/vendors~main.939066a290695a10f0ed.bundle.js",
+    "vendors~main.css.map": "/vendors~main.css.map",
+    "vendors~main.js.map": "/vendors~main.939066a290695a10f0ed.bundle.js.map",
+    "iframe.html": "/iframe.html",
+    "precache-manifest.ff161842aac27dc481da020082437461.js": "/precache-manifest.ff161842aac27dc481da020082437461.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/company-logo.png": "/static/media/company-logo.a6f29c30.png",
+    "static/media/desert.jpeg": "/static/media/desert.782f458f.jpeg",
+    "static/media/all.css": "/static/media/fa-solid-900.e245d7d6.woff2",
+    "static/media/grand-canyon.jpeg": "/static/media/grand-canyon.9f53d598.jpeg"
+  },
+  "entrypoints": [
+    "runtime~main.939066a290695a10f0ed.bundle.js",
+    "vendors~main.css",
+    "vendors~main.939066a290695a10f0ed.bundle.js",
+    "main.css",
+    "main.939066a290695a10f0ed.bundle.js"
+  ]
+}

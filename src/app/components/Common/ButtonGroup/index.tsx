@@ -8,7 +8,7 @@ export interface ButtonGroupProps {
 
 class ButtonGroup extends React.Component<ButtonGroupProps> {
   componentDidMount() {
-
+    this.validateChildren();
   }
 
   validateChildren = () => {

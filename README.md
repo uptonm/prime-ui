@@ -10,9 +10,9 @@ All components will be hooked up to Storybook for display, tested with Jest, and
 
 - _For the purposes of contribution we ask that all changes are made using `yarn` for consistency._
 
-- First install dependencies with `npm install` or `yarn install`
-- Run the Storybook dev server with `npm run storybook` or `yarn storybook`
+- First install dependencies with `yarn install`
+- Run the Storybook dev server with `yarn storybook`
 
 ## Running the Main Application
 
-- You can run the React Dev Server with `npm start` or `yarn start`, this will compile everything and run a local dev server based on the content in `./src/app/Root.tsx`
+- You can run the React Dev Server with `yarn start`, this will compile everything and run a local dev server based on the content in `./src/app/Root.tsx`

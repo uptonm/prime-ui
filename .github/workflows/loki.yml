@@ -17,6 +17,12 @@ jobs:
       with:
         node-version: 12
         
+    - name: Set Font Awesome Pro Registry
+      run: npm config set "@fortawesome:registry" ${{ secrets.FONTAWESOME_REGISTRY }}
+      
+    - name: Set Font Awesome Pro Auth Token
+      run: npm config set "//npm.fontawesome.com/:_authToken" ${{ secrets.FONTAWESOME_AUTH_TOKEN }}
+      
       # Get Cached Dependencies if Existing      
     - name: Get yarn cache
       id: yarn-cache
